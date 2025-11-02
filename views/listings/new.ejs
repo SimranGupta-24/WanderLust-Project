@@ -1,0 +1,55 @@
+<% layout('layouts/boilerplate') %>
+<body>
+    <br><br>
+    <div class="row">
+    <div class="col-8 offset-2">
+    <h3>Create new listing</h3>
+    
+    <!-- non validate will make all the default browser settings as invalid -->
+    <form method="POST" action="/listings" novalidate class="needs-validation" >
+        <div class="mb-3">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" placeholder="Enter your title" name= "listing[title]" class="form-control" required>
+            <div class="valid-feedback">Title looks good!</div>
+        </div>
+       
+        <div class="mb-3">
+            <label for="description" class="form-label">Description:</label>
+            <textarea rows="5" cols="10" name= "listing[description]" placeholder="enter description" class="form-control" required></textarea>
+            <div class="valid-feedback">Title looks good!</div>
+        </div>
+
+        <div class="mb-3">
+            <label for="image" class="form-label">Upload Image:</label>
+            <input type="text" name="listing[image]" placeholder="enter image URL" class="form-control" required>
+           
+        </div>
+
+
+        <div class="row">
+            <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" placeholder="Enter your Price" name="listing[price]" class="form-control" required>
+            <div class="invalid-feedback">Enter Valid Price</div>
+            </div>
+
+            <div class="mb-3 col-md-8">
+            <label for="location" class="form-label">Location:</label>
+            <input type="text" placeholder="Enter your Loaction" name="listing[location]" class="form-control" required>
+            <div class="invalid-feedback">Enter Valid Location</div>
+            </div>
+        </div>
+       
+
+        <div class="mb-3">
+            <label for="country" class="form-label">Country:</label>
+            <input type="text" placeholder="Enter your Country" name="listing[country]" class="form-control" required>
+            <div class="invalid-feedback">Enter Valid Country</div>
+        </div>
+        <br><br>
+        <button class="btn btn-dark add-btn">Create</button>
+    </form>
+    </div>
+    </div>
+    <br><br>
+</body>
